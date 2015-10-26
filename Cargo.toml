@@ -5,6 +5,7 @@ license = "MIT"
 authors = ["Markus Kohlhase <mail@markus-kohlhase.de>"]
 repository = "https://github.com/flosse/r2d2-cypher"
 description = "Cypher support for the r2d2 connection pool"
+readme = "README.md"
 
 keywords = ["cypher", "neo4j", "r2d2"]
 
