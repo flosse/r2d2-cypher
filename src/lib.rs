@@ -17,7 +17,10 @@ impl r2d2::ManageConnection for CypherConnectionManager{
   }
 
   fn is_valid(&self, conn: &mut GraphClient) -> Result<(), GraphError> {
-    Ok(())
+    match conn.cypher().exec("RETURN 1") {
+      Ok(_)     => Ok(()),
+      Err(err)  => Err(err)
+    }
   }
 
   fn has_broken(&self, conn: &mut GraphClient) -> bool {
