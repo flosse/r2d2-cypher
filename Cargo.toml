@@ -11,4 +11,9 @@ keywords = ["cypher", "neo4j", "r2d2"]
 
 [dependencies]
 r2d2 = "*"
-rusted_cypher = "*"
+
+[dependencies.rusted_cypher]
+version = "0.7.1"
+git = "git://github.com/livioribeiro/rusted-cypher.git"
+branch = "feature/rustc-serialize"
+features = ["rustc-serialize"]
