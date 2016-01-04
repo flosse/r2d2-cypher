@@ -14,8 +14,8 @@ use r2d2::{Config, Pool};
 use r2d2_cypher::CypherConnectionManager;
 
 pub fn main() {
-  let db_url  = "http://neo4j:neo4j@127.0.0.1:7474/db/data".to_string();
-  let manager = CypherConnectionManager{url:db_url};
+  let db_url  = "http://neo4j:neo4j@127.0.0.1:7474/db/data";
+  let manager = CypherConnectionManager{url:db_url.to_owned()};
   let config  = Config::builder().pool_size(5).build();
   let pool    = Pool::new(config, manager).unwrap();
   let client  = pool.clone().get().unwrap();
