@@ -1,6 +1,6 @@
 [package]
 name = "r2d2_cypher"
-version = "0.0.3"
+version = "0.1.0"
 license = "MIT"
 authors = ["Markus Kohlhase <mail@markus-kohlhase.de>"]
 repository = "https://github.com/flosse/r2d2-cypher"
@@ -11,4 +11,4 @@ keywords = ["cypher", "neo4j", "r2d2"]
 
 [dependencies]
 r2d2 = "0.6"
-rusted_cypher = "0.8"
+rusted_cypher = "0.9"
