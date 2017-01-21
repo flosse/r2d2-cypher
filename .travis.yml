@@ -7,7 +7,6 @@ matrix:
   - rust: stable
 script:
 - cargo build
-- cargo test
 
 # load travis-cargo
 before_script:
