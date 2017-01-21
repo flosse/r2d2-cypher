@@ -1,4 +1,4 @@
-// Copyright (c) 2015 - 2016 Markus Kohlhase <mail@markus-kohlhase.de>
+// Copyright (c) 2015 - 2017 Markus Kohlhase <mail@markus-kohlhase.de>
 
 #![deny(missing_docs,
         missing_debug_implementations, missing_copy_implementations,
@@ -10,6 +10,9 @@
 //! [r2d2-cypher](https://github.com/flosse/r2d2-cypher) is a
 //! [r2d2](https://github.com/sfackler/r2d2) connection pool for
 //! [rusted-cypher](https://github.com/livioribeiro/rusted-cypher).
+//!
+//! [![](http://meritbadge.herokuapp.com/r2d2_cypher)](https://crates.io/crates/r2d2_cypher)
+//! [![Build Status](https://travis-ci.org/flosse/r2d2-cypher.svg?branch=master)](https://travis-ci.org/flosse/r2d2-cypher)
 //!
 //! # Example
 //!

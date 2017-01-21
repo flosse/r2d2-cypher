@@ -4,6 +4,9 @@
 [r2d2](https://github.com/sfackler/r2d2) connection pool for
 [rusted-cypher](https://github.com/livioribeiro/rusted-cypher).
 
+[![](http://meritbadge.herokuapp.com/r2d2_cypher)](https://crates.io/crates/r2d2_cypher)
+[![Build Status](https://travis-ci.org/flosse/r2d2-cypher.svg?branch=master)](https://travis-ci.org/flosse/r2d2-cypher)
+
 ## Example
 
 ```rust
