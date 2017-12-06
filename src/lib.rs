@@ -20,14 +20,13 @@
 //! extern crate r2d2;
 //! extern crate r2d2_cypher;
 //!
-//! use r2d2::{Config, Pool};
+//! use r2d2::Pool;
 //! use r2d2_cypher::CypherConnectionManager;
 //!
 //! pub fn main() {
 //!   let db_url  = "http://neo4j:neo4j@127.0.0.1:7474/db/data";
 //!   let manager = CypherConnectionManager{url:db_url.to_owned()};
-//!   let config  = Config::builder().pool_size(5).build();
-//!   let pool    = Pool::new(config, manager).unwrap();
+//!   let pool    = Pool::builder().max_size(5).build(manager).unwrap();
 //!   let client  = pool.clone().get().unwrap();
 //!   let result  = client.cypher().exec("MATCH (n)-[r]->() RETURN n");
 //! }
@@ -55,7 +54,7 @@ impl r2d2::ManageConnection for CypherConnectionManager {
   }
 
   fn is_valid(&self, conn: &mut GraphClient) -> Result<(), GraphError> {
-    conn.exec("RETURN 1").map(|_|())
+    conn.exec("RETURN 1").map(|_| ())
   }
 
   fn has_broken(&self, _: &mut GraphClient) -> bool {
